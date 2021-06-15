@@ -18,7 +18,6 @@ jobs:
           restore-keys: ${{ runner.os }}-pip-
       - run: |
           pip install --user --upgrade pip wheel
-          make install-libtorrent
           pip install -e .[lint]
       - run: make lint
 
@@ -47,7 +46,6 @@ jobs:
           restore-keys: ${{ runner.os }}-pip-
       - run: |
           pip install --user --upgrade pip wheel
-          make install-libtorrent
           pip install -e .[test]
       - env:
           HOME: /tmp
