@@ -55,7 +55,8 @@ setup(
         'pbkdf2==1.3',
         'attrs==18.2.0',
         'pylru==1.1.0',
-        'elasticsearch==7.10.1'
+        'elasticsearch==7.10.1',
+        'lbry-libtorrent',
     ] + PLYVEL,
     extras_require={
         'lint': ['mypy==0.701', 'pylint==2.4.4'],
