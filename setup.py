@@ -58,7 +58,7 @@ setup(
         'elasticsearch==7.10.1'
     ] + PLYVEL,
     extras_require={
-        'lint': ['mypy', 'pylint'],
+        'lint': ['mypy==0.701', 'pylint==2.4.4'],
         'test': ['coverage'],
     },
     classifiers=[
