@@ -18,6 +18,7 @@ jobs:
           restore-keys: ${{ runner.os }}-pip-
       - run: |
           pip install --user --upgrade pip wheel
+          make install-dependencies
           pip install -e .[lint]
       - run: make lint
 
