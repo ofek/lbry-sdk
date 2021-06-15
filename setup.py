@@ -57,6 +57,10 @@ setup(
         'pylru==1.1.0',
         'elasticsearch==7.10.1'
     ] + PLYVEL,
+    extras_require={
+        'lint': ['mypy', 'pylint'],
+        'test': ['coverage'],
+    },
     classifiers=[
         'Framework :: AsyncIO',
         'Intended Audience :: Developers',

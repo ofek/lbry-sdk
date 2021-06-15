@@ -10,7 +10,15 @@ jobs:
       - uses: actions/setup-python@v1
         with:
           python-version: '3.7'
-      - run: make install tools
+      - name: extract pip cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('setup.py') }}
+          restore-keys: ${{ runner.os }}-pip-
+      - run: |
+          pip install --user --upgrade pip wheel
+          pip install -e .[lint]
       - run: make lint
 
 #  tests-unit:
