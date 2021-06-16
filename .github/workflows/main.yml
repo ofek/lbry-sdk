@@ -90,7 +90,7 @@ jobs:
 #      - run: tox -e ${{ matrix.test }}
 
   build:
-    needs: ["lint", "tests-unit", "tests-integration"]
+    needs: ["lint", "tests-unit"] #, "tests-integration"]
     name: "build"
     strategy:
       matrix:
